@@ -1,0 +1,33 @@
+import java.util.*;
+
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int S;double c;
+        System.out.println("enter the sales of a salesman");
+        Scanner sc = new Scanner(System.in);
+        S = sc.nextInt();
+        c = sc.nextDouble();
+        if(S>=10000)
+        {
+            c = S*0.10;
+            System.out.println("commision"+c);
+        }
+        else
+        {
+            c = S*0.05;
+            System.out.println("commision"+c);
+        }
+
+    }
+
+}
