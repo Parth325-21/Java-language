@@ -1,0 +1,55 @@
+import java.util.*;
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ //*/
+
+//package constructorbook;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+     public static class Book
+     {
+         String BId,subject,Author;
+         int Qty;
+         double Prize,TAmount;
+    public Book()
+    {
+        BId = "  ";
+        subject = " ";
+        Author = " ";
+        Qty = 0;
+        Prize = 0.0;
+    }
+    public void getvalue()
+    {
+        System.out.println("enter the Book Id,subject,Author,Qty,Prize");
+        Scanner sc = new Scanner(System.in);
+        BId = sc.nextLine();
+        subject = sc.nextLine();
+        Author = sc.nextLine();
+        Qty = sc.nextInt();
+        Prize = sc.nextDouble();
+    }
+    public void calculateAmount()
+    {
+        TAmount = Qty*Prize;
+    }
+    public void Display()
+    {   calculateAmount();
+        System.out.println("Book Id"+BId + "subject"+subject + "Author Name"+Author + "Quatity"+Qty + "Prize"+Prize + "TAmount"+TAmount);
+    }
+     }
+    public static void main(String[] args) {
+        Book B = new Book();
+        B.getvalue();
+        B.Display();
+    }
+
+}
