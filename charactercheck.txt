@@ -1,0 +1,36 @@
+import java.util.*;
+
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        char ch;
+        System.out.println("enter the character");
+        Scanner sc = new Scanner (System.in);
+        ch = sc.next().charAt(0);
+        if(ch>='A' && ch<='Z')
+        {
+            System.out.println("character is in upper case");
+        }
+        else if(ch>='a' && ch<='z')
+        {
+            System.out.println("character is in lower case");
+        }
+        else if(ch>='0' && ch<='9')
+        {
+            System.out.println("character is digit");
+        }
+        else
+        {
+            System.out.println("Special character");
+        }
+    }
+
+}
