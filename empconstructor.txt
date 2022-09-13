@@ -1,0 +1,47 @@
+import java.util.*;
+ //* To change this template, choose Tools | Templates
+ //* and open the template in the editor.
+ //*/
+
+//package empconstructor;
+
+/**
+ *
+ * @author Parth
+ */
+class Main {
+
+    //**
+     //* @param args the command line arguments
+     ///*
+    public static class Employe
+    {
+        String  ENo;
+        String name,Address;
+        double basicsalary,NetSalary;
+    public Employe()
+    {
+        ENo = "E001";
+        name = "Ankur";
+        basicsalary = 12000;
+        Address = "Buddhibhir Moradabad";
+    }
+    public void calculate()
+    {
+        double pf,hra,da,Gs;
+        pf = 0.12*basicsalary;
+        hra = 0.10*basicsalary;
+        da = 0.05*basicsalary;
+        Gs = basicsalary+hra+da;
+        NetSalary = Gs-pf;
+    }
+    public void putdata()
+    {
+        System.out.println("Employe number"+ENo + "Name"+name + "basicsalary"+basicsalary + "Address"+Address + "NetSalary"+ NetSalary);
+    }
+}
+    public static void main(String[] args) {
+        Employe E = new Employe();
+        E.putdata();
+    }
+}
