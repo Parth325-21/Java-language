@@ -1,0 +1,42 @@
+import java.util.*;
+ //* To change this template, choose Tools | Templates
+ //* and open the template in the editor.
+ //*/
+
+//package findsmallestnoinarray;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static int smallest(int A[],int n)
+    {
+        int s = A[0];
+        for(int i = 1;i<n;i++)
+        {
+            if(A[i]<s)
+            s = A[i];
+        }
+        return s;
+    }
+    public static void main(String[] args) {
+        int A1[100];
+        int s1,i,l;
+        System.out.println("enter the size of an arrays ");
+        Scanner sc = new Scanner (System.in);
+        s1 = sc.nextInt();
+        for(i=0;i<s1;i++)
+        {
+            A1[i] = sc.nextInt();
+        }
+        l = smallest(A1,s1);
+        System.out.println("Smallest value is"+l);
+
+    }
+
+}
