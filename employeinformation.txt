@@ -1,0 +1,56 @@
+import java.util.*;
+ //* To change this template, choose Tools | Templates
+ //* and open the template in the editor.
+ //*/
+
+//package employeinformation;
+
+/**
+ *
+ * @author Parth
+ */
+public  class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+     public  static class Emp
+     {
+         int ENo;
+         String Ename,Address;
+         double basic ,netSalary;
+         public void getdata()
+         { char ch;
+             System.out.println("enter employee number,basic salary,Address");
+             Scanner sc = new Scanner(System.in);
+             ENo = sc.nextInt();
+             Ename = sc.nextLine();
+             ch = sc.next().charAt(0);
+             basic = sc.nextDouble();
+             ch = sc.next().charAt(0);
+             Address = sc.nextLine();
+         }
+         public void calculate()
+         {
+             double pf,hra,da,Gs;
+             pf = 0.12*basic;
+             hra = 0.10*basic;
+             da = 0.05*basic;
+             Gs = basic+hra+da;
+             netSalary = Gs-pf;
+         }
+         public void putsdata()
+         {
+             System.out.println("Employee Number"+ENo + "Emp Name"+Ename + "basic salary"+basic + "netSalary"+netSalary + "Addresss"+Address);
+         }
+
+     }
+    public static void main(String[] args) {
+        Emp E = new Emp();
+        E.getdata();
+        E.calculate();
+        E.putsdata();
+    }
+
+}
+
