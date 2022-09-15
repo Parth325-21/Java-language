@@ -1,0 +1,70 @@
+import java.util.*;
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ //*/
+
+//package foverloadlargest;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+     public static class Largest
+     {
+         int n1,n2,n3,A;
+    public int Largest(int na,int nb)
+    {
+        if(na>nb)
+            return na;
+        else
+            return nb;
+    }
+    public int Largest(int na,int nb,int nc)
+    {
+        int l=0;
+        if (na>nb && na>nc)
+        {
+            l= na;
+        }
+        else if(nb>na && nb>nc)
+        {
+            l= nb;
+        }
+        else if(nc>na && nc>nb)
+        {
+            l= nc;
+        }
+        return l;
+    }
+     public int Largest(int A[],int n)
+        {
+            int i,l = A[0];
+            for(i=1;i<n;i++)
+            {
+                if(A[i]>l)
+                    l = A[i];
+            }
+            return l;
+      }
+     }
+    public static void main(String[] args) {
+            int i;
+            int A[]=new int[5];
+           for(i=0;i<5;i++)
+           {
+           System.out.println("enter the array");
+           Scanner sc = new Scanner(System.in);
+           A[i] = sc.nextInt();
+           }
+       Largest L = new Largest();
+       int a = L.Largest(2,3);
+       int b = L.Largest(5,6,7);
+       int c = L.Largest(A,5);
+      System.out.println("largest  "+a + "largest  "+b + "largest "+c);
+       }
+    }
