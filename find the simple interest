@@ -1,0 +1,30 @@
+import java.util.*;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+//package javaapplication1;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        double P,R,T,SI;
+        System.out.println("enter the value of P,R,T");
+        Scanner sc = new Scanner (System.in);
+        P = sc.nextDouble();
+        R = sc.nextDouble();
+        T = sc.nextDouble();
+        SI =(P*R*T)/100;
+        System.out.println("simple interest"+SI);
+    }
+
+}
