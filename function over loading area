@@ -1,0 +1,44 @@
+import java.util.*;
+// * To change this template, choose Tools | Templates
+ //* and open the template in the editor.
+ //*/
+
+//package foverloadingarea;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static class Area
+    {
+        double ar;
+    public void Area(double r1)
+    {
+        ar = 3.14*r1*r1;
+        System.out.println("Area of circle"+ar);
+    }
+    public void Area (int l ,int b)
+    {
+        ar = l*b;
+        System.out.println("Area of reactangle"+ar);
+    }
+    public void Area (int s)
+    {
+        ar = s*s;
+        System.out.println("Area of Square"+ar);
+    }
+    }
+    public static void main(String[] args) {
+     Area A = new Area();
+     A.Area(2.5);
+     A.Area(5,6);
+     A.Area(4);
+
+    }
+
+}
