@@ -1,0 +1,35 @@
+import java.util.*;/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+//package foverloadingsici;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static class Interest
+    {
+        double P,R,T;
+        public double Interest(double P1,double R1,double T1,double SI )
+        {
+            SI = (P1*R1*T1)/100;
+            return SI;
+        }
+        public double Interest(double P1,double T1,double R1)
+        {
+         double CI = P1*(Math.pow(1+R1/100,T1))-P1;
+         return CI;
+        }
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+
+}
