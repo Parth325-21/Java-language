@@ -1,0 +1,28 @@
+import java.util.*;
+
+
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+
+
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double l,b,A,P;
+        System.out.println("enter the value of l,b");
+        Scanner sc = new Scanner(System.in);
+        l = sc.nextDouble();
+        b = sc.nextDouble();
+        A = l*b;
+        P = 2*(l+b);
+        System.out.println("Area"+A+ "parameter"+P);
+    }
+
+}
