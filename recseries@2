@@ -1,0 +1,35 @@
+import java.util.*;
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ //*/
+
+//package recseriesprint;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+     public static void series1(int n,int i,int a)
+     {
+         if(a>n)
+             return ;
+         else
+         {
+             System.out.print(" "+ i);
+             series1(n,i+3,a+1);
+         }
+     }
+    public static void main(String[] args) {
+        int n1,A;
+        System.out.println("enter the value of n1");
+        Scanner sc = new Scanner (System.in);
+        n1 = sc.nextInt();
+        series1(n1,1,1);
+    }
+
+}
