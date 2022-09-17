@@ -1,0 +1,42 @@
+import java.util.*;/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+//package recseries3;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static double series (int n,double i,double j,double sum,int a)
+    {
+        if(a>n)
+        {   
+            return sum;
+        }
+        else
+        {
+            
+         sum = sum + (double) (i/j);
+
+         return series(n,i+3,j+4,sum,a+1);
+        }
+    }
+    public static void main(String[] args) {
+        int n1;double A;
+        System.out.println("enter the value of n1");
+        Scanner sc = new Scanner(System.in);
+        n1 = sc.nextInt();
+       A = series(n1,2,5,0.0,1);
+       System.out.println("sum is "+A);
+
+
+    }
+
+}
