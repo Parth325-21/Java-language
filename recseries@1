@@ -1,0 +1,32 @@
+import java.util.*;/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+//package recseries4;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public double series (int n,double x,double sum)
+    {
+        if(n == 0)
+            return 1;
+        else
+        {
+            sum = sum + Math.pow(x,n);
+                    return series(n-1,x,sum);
+
+        }
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+
+}
