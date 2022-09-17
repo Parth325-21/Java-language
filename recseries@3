@@ -1,0 +1,36 @@
+import java.util.*;/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+//package recsumseries1;
+
+/**
+ *
+ * @author Parth
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static double sumseries(int n,double sum)
+    {
+        if(n == 0)
+            return sum;
+        else
+        {
+            sum = sum + (double) 1/n;
+            return sumseries(n-2,sum);
+        }
+    }
+    public static void main(String[] args) {
+        int n1;double s1;
+        System.out.println("enter the value of n1");
+        Scanner sc = new Scanner(System.in);
+        n1 = sc.nextInt();
+        s1 = sumseries(n1,0);
+        System.out.println(s1);
+    }
+
+}
