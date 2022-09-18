@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static int Factorial(int num)
+    {
+        if(num == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return num+Factorial(num-1);
+        }
+    }
+    public static void main(String[] args) {
+       int n;
+       System.out.println("enter the value of num1");
+       Scanner sc = new Scanner(System.in);
+       n = sc.nextInt();
+       int r = Factorial(n);
+       System.out.println(r);
+    }
+
+}
