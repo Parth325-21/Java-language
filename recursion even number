@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main {
+    public static int evennumber(int numb1,int sum1)
+    {
+        if(numb1 == 0)
+            return sum1;
+        else
+        { sum1+=numb1;
+            return  evennumber(numb1-2,sum1);
+    }
+    }
+    public static void main(String[] args) {
+        int numb=0,sum;
+        System.out.println("enter the value of number");
+        Scanner sc = new Scanner(System.in);
+        numb = sc.nextInt();
+        sum = evennumber(50,0);
+        System.out.println("sum of 50 even numbers"+sum);
+
+    }
+
+}
