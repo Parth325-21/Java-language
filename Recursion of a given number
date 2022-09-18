@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+     public static int table(int numb1,int i)
+     {
+         if(i>10)
+             return 0;
+         else
+         {
+             System.out.println(" "+(numb1*i));
+             return table(numb1,i+1);
+         }
+     }
+    public static void main(String[] args) {
+        int numb,i,A;
+        System.out.println("enter the value of number");
+        Scanner sc = new Scanner(System.in);
+        numb = sc.nextInt();
+        A = table(numb,0);
+        System.out.println(A);
+
+    }
+
+}
