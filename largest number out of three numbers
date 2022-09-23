@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int n1,n2,n3;
+        System.out.println("enter the numbers of n1,n2,n3");
+        Scanner sc = new Scanner(System.in);
+        n1 = sc.nextInt();
+        n2 = sc.nextInt();
+        n3 = sc.nextInt();
+        if(n1>n2 && n1>n3)
+        {
+            System.out.println("greater number"+n1);
+        }
+        else if(n2>n1 && n2>n3)
+        {
+            System.out.println("greater number"+n2);
+        }
+        else if(n3>n1 && n3>n2)
+        {
+            System.out.println("greater number"+n3);
+        }
+        else
+        {
+            System.out.println("All number are equals");
+        }
+    }
+
+}
