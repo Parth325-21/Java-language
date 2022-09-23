@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+     public  static int sumnumber(int n1)
+          {
+              if(n1 == 1)
+                  return 1;
+              else
+                  return n1+sumnumber(n1-1);
+          }
+    public static void main(String[] args) {
+        int n,sum;
+        System.out.println("enter the value of n");
+         Scanner sc = new Scanner(System.in);
+          n = sc.nextInt();  
+          sum = sumnumber(n);
+          System.out.println("sum of natural"+sum);
+    }
+    }
+
+
