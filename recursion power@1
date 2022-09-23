@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static int power(int a1,int b1)
+    {
+        int S;
+        if(b1 == 1)
+            return a1;
+        else
+        {
+            return a1*power(a1,b1-1);
+        }
+    }
+    public static void main(String[] args) {
+       int a,b;
+       System.out.println("enter the value of a,b");
+       Scanner sc = new Scanner(System.in);
+       a = sc.nextInt();
+       b = sc.nextInt();
+       int S = power(a,b);
+       System.out.println(S);
+    }
+
+}
