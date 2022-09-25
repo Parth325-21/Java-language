@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int A,B,res;char oper;
+        System.out.println("enter the value of A,B,oper");
+        Scanner sc = new Scanner(System.in);
+        A = sc.nextInt();
+        B = sc.nextInt();
+        oper = sc.next().charAt(0);
+        switch(oper)
+        {
+         case '+':
+             res = A+B;
+             System.out.println("addition"+res);
+         case '-':
+                res = A-B;
+                System.out.println("Subraction"+res);
+
+         case'*':
+                res = A*B;
+                System.out.println("Multiplication"+res);
+         case'/':
+                res = A/B;
+                System.out.println("Division"+res);
+                break;
+            default:
+                System.out.println("operator is not valid");
+        }
+    }
+}
