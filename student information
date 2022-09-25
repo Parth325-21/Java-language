@@ -1,0 +1,35 @@
+import java.util.*;
+public class Main {
+     public static class studentmarks
+     {
+         int RollNo;
+         String Name;
+         double m1,m2,m3,percentage;
+         public void readdata()
+         {   char ch;
+             System.out.println("enter the RollNo,Name,m1,m2,m3");
+             Scanner sc = new Scanner(System.in);
+             RollNo = sc.nextInt();
+             Name = sc.nextLine();
+             ch=sc.next().charAt(0);
+             m1 = sc.nextDouble();
+             m2 = sc.nextDouble();
+             m3 = sc.nextDouble();
+         }
+         public void calculatepercentage()
+         {
+             percentage = (m1+m2+m3)/3;
+         }
+         public void showdata()
+         {
+             System.out.println("Student RollNo"+RollNo + "StudentName"+Name +"Mark1"+m1 + "Mark2"+m2 + "Mark3"+m3 + "Percentage"+percentage);
+         }
+     }
+    public static void main(String[] args) {
+        studentmarks M = new studentmarks();
+        M.readdata();
+        M.calculatepercentage();
+        M.showdata();
+    }
+
+}
